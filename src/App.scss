@@ -1,5 +1,5 @@
 .App {
-  min-height: 100vh;
+  min-height: 200vh;
   background-color: black;
   color: #02ccff;
   display: flex;
@@ -13,35 +13,72 @@
     .main-header {
       background-image: url(./assets/header.svg);
       min-height: 151px;
-      .hamburger {
-        margin-left: 1em;
-        margin-top: 1em;
-        fill: black;
+      .Nav {
+        height: 60px;
+        width: 100%;
         position: fixed;
-        box-shadow: inset 0 0 40px 0 white;
-        padding: 5px;
-        border-radius: 7px;
-        .line-one[direction="true"] {
-          animation: rotate-down 0.3s ease-out forwards 0.3s;
+        display: flex;
+        align-items: center;
+        padding-left: 1em;
+        box-shadow: inset 0 0 200px 0 white;
+        transition: 0.5s ease-out;
+        .hamburger {
+          fill: black;
+          padding: 5px;
+          margin-right: 1.2em;
+          // box-shadow: inset 0 0 40px 0 white;
+
+          border-radius: 7px;
+          .line-one[direction="true"] {
+            animation: rotate-down 0.3s ease-out forwards 0.3s;
+          }
+          .line-one[direction="false"] {
+            animation: rotate-down-reverse 0.3s ease-out forwards;
+          }
+          .line-two[direction="true"] {
+            animation: slide-out 0.3s ease-out forwards;
+          }
+          .line-two[direction="false"] {
+            animation: slide-out-reverse 0.6s ease-out forwards;
+          }
+          .line-three[direction="true"] {
+            animation: rotate-up 0.3s ease-out forwards 0.3s;
+          }
+          .line-three[direction="false"] {
+            animation: rotate-up-reverse 0.3s ease-out forwards;
+          }
         }
-        .line-one[direction="false"] {
-          animation: rotate-down-reverse 0.3s ease-out forwards;
+        .link-wrapper {
+          // box-shadow: inset 0 0 20px 0 white;
+          width: 80%;
+          height: 40px;
+          position: absolute;
+          left: 3.5em;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          overflow: hidden;
+          transition: width 0.5s ease-out;
+          a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            font-size: 1.2em;
+          }
+          a + a {
+            margin-left: 1.2em;
+          }
         }
-        .line-two[direction="true"] {
-          animation: slide-out 0.3s ease-out forwards;
-        }
-        .line-two[direction="false"] {
-          animation: slide-out-reverse 0.6s ease-out forwards;
-        }
-        .line-three[direction="true"] {
-          animation: rotate-up 0.3s ease-out forwards 0.3s;
-        }
-        .line-three[direction="false"] {
-          animation: rotate-up-reverse 0.3s ease-out forwards;
+        .link-wrapper[direction="false"] {
+          width: 0;
         }
       }
+      .Nav[direction="false"] {
+        width: 21%;
+        border-radius: 0.25em;
+      }
     }
-    .icon-list {
+    .IconList {
       display: flex;
       justify-content: center;
       a {
@@ -61,7 +98,6 @@
     }
   }
 }
-
 @keyframes rotate-up {
   0% {
     transform: rotate(0);
