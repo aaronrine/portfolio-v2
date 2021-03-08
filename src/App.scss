@@ -1,6 +1,10 @@
 .App {
-  min-height: 200vh;
+  min-height: 100vh;
   background-color: black;
+  color: #02ccff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   .above-fold-container {
     min-height: 100vh;
     display: flex;
@@ -37,7 +41,21 @@
         }
       }
     }
-
+    .icon-list {
+      display: flex;
+      justify-content: center;
+      a {
+        text-decoration: none;
+        color: inherit;
+        font-size: 2em;
+      }
+      a + a {
+        margin-left: 1em;
+      }
+    }
+    h1 {
+      text-align: center;
+    }
     img {
       width: 100%;
     }
