@@ -8,6 +8,10 @@
   & > * {
     text-align: center;
   }
+  h1 {
+    font-size: 2em;
+    margin: 1em 0;
+  }
   .above-fold-container {
     min-height: 100vh;
     display: flex;
@@ -82,18 +86,7 @@
         border-radius: 0.25em;
       }
     }
-    .IconList {
-      display: flex;
-      justify-content: center;
-      a {
-        text-decoration: none;
-        color: inherit;
-        font-size: 2em;
-      }
-      a + a {
-        margin-left: 1em;
-      }
-    }
+
     img {
       width: 100%;
     }
@@ -103,14 +96,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    h1 {
-      font-size: 2em;
-      margin: 1em 0;
-    }
+
     .Project {
       position: relative;
       width: 80%;
       height: 20em;
+      margin-bottom: 2em;
       box-shadow: inset 0 0 200px 0 white;
       color: black;
       overflow: hidden;
@@ -160,8 +151,19 @@
         grid-column: 2;
         grid-row: 3;
       }
-      & + .Project {
-        margin-top: 2em;
+    }
+  }
+  .Contact {
+    .IconList {
+      display: flex;
+      justify-content: center;
+      a {
+        text-decoration: none;
+        color: inherit;
+        font-size: 2em;
+      }
+      a + a {
+        margin-left: 1em;
       }
     }
   }

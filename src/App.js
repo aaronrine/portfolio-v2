@@ -47,16 +47,22 @@ const projects = [
     name: "Progress Bar",
     tech: getBadges(["html", "css", "js"]),
     image: progressBar,
+    demo: "http://www.google.com",
+    code: "https://github.com/aaronrine/vanilla-progress-bar",
   },
   {
     name: "Progress Bar",
     tech: getBadges(["html", "css", "js"]),
     image: progressBar,
+    demo: "http://www.google.com",
+    code: "#top",
   },
   {
     name: "Progress Bar",
     tech: getBadges(["html", "css", "js"]),
     image: progressBar,
+    demo: "http://www.google.com",
+    code: "#top",
   },
 ];
 
@@ -117,19 +123,7 @@ function App() {
             </div>
           </nav>
         </header>
-        <div className="IconList">
-          {icons.map(({ icon, uri, key, title }) => (
-            <a
-              href={uri}
-              target="_blank"
-              rel="noreferrer"
-              key={key}
-              title={title}
-            >
-              <FontAwesomeIcon icon={icon} />
-            </a>
-          ))}
-        </div>
+
         <h1>Elegant solutions to practical problems.</h1>
         <img src={midPic} alt="blue glass geometric crystals"></img>
       </div>
@@ -155,14 +149,54 @@ function App() {
               </div>
               <p>{project.desc}</p>
               <div className="button btn-demo">
-                <a href={project.demo}>Demo</a>
+                <a href={project.demo} target="_blank" rel="noreferrer">
+                  Demo
+                </a>
               </div>
               <div className="button btn-code">
-                <a href={project.code}>Code</a>
+                <a href={project.code} target="_blank" rel="noreferrer">
+                  Code
+                </a>
               </div>
             </div>
           );
         })}
+      </section>
+      <section className="Contact" id="contact">
+        <h1>Contact</h1>
+        <div className="IconList">
+          {icons.map(({ icon, uri, key, title }) => (
+            <a
+              href={uri}
+              target="_blank"
+              rel="noreferrer"
+              key={key}
+              title={title}
+            >
+              <FontAwesomeIcon icon={icon} />
+            </a>
+          ))}
+        </div>
+        <form className="contact-form">
+          <label for="subject">Subject</label>
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            placeholder="Subject..."
+          />
+          <label for="message">Message</label>
+          {/* <input type="text" id="email" name="email" placeholder="email..." /> */}
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+            cols="30"
+            placeholder="Like what you see? Let me know!"
+          ></textarea>
+          <input type="submit" value="Submit" />
+        </form>
+        <a href="tel:7024652519">(702) 465-2519</a>
       </section>
     </div>
   );
