@@ -6,6 +6,7 @@ import js from "./assets/js2.png";
 import react from "./assets/react2.png";
 import sass from "./assets/sass.png";
 import python from "./assets/python.webp";
+import progressBar from "./assets/progressBars.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faFileDownload } from "@fortawesome/free-solid-svg-icons";
@@ -40,6 +41,28 @@ const badges = [
   { source: sass, alt: "sass" },
   { source: python, alt: "python" },
 ];
+
+const projects = [
+  {
+    name: "Progress Bar",
+    tech: getBadges(["html", "css", "js"]),
+    image: progressBar,
+  },
+  {
+    name: "Progress Bar",
+    tech: getBadges(["html", "css", "js"]),
+    image: progressBar,
+  },
+  {
+    name: "Progress Bar",
+    tech: getBadges(["html", "css", "js"]),
+    image: progressBar,
+  },
+];
+
+function getBadges(keywords) {
+  return badges.filter((badge) => keywords.includes(badge.alt));
+}
 
 function App() {
   const [burgerState, setBurgerState] = useState("false");
@@ -112,26 +135,34 @@ function App() {
       </div>
       <section id="projects" className="Projects">
         <h1>Projects</h1>
-        <div className="Project">
-          <h2>Project Name</h2>
-          <div className="badge-container">
-            {badges.map(({ source, alt }, index) => (
-              <img className="badge" src={source} key={index} alt={alt}></img>
-            ))}
-          </div>
-          <ul className="details">
-            <li className="detail">short</li>
-            <li className="detail">list</li>
-            <li className="detail">of</li>
-            <li className="detail">items</li>
-          </ul>
-          <div className="button btn-demo">
-            <a href="#top">Demo</a>
-          </div>
-          <div className="button btn-code">
-            <a href="#top">Code</a>
-          </div>
-        </div>
+        {projects.map((project, index) => {
+          return (
+            <div
+              className="Project"
+              key={index}
+              style={{ backgroundImage: "url(" + project.image + ")" }}
+            >
+              <h2>{project.name}</h2>
+              <div className="badge-container">
+                {project.tech.map(({ source, alt }, index) => (
+                  <img
+                    className="badge"
+                    src={source}
+                    key={index}
+                    alt={alt}
+                  ></img>
+                ))}
+              </div>
+              <p>{project.desc}</p>
+              <div className="button btn-demo">
+                <a href={project.demo}>Demo</a>
+              </div>
+              <div className="button btn-code">
+                <a href={project.code}>Code</a>
+              </div>
+            </div>
+          );
+        })}
       </section>
     </div>
   );
