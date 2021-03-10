@@ -24,14 +24,15 @@
         height: 60px;
         width: 100%;
         position: fixed;
+        background-color: black;
+        color: inherit;
         z-index: 1000;
         display: flex;
         align-items: center;
         padding-left: 1em;
-        box-shadow: inset 0 0 200px 0 white;
         transition: 0.3s ease-out;
         .hamburger {
-          fill: black;
+          fill: #02ccff;
           padding: 5px;
           margin-right: 1.2em;
 
@@ -67,7 +68,7 @@
           transition: width 0.5s ease-out;
           a {
             text-decoration: none;
-            color: black;
+            color: #02ccff;
             font-weight: bold;
             font-size: 1.2em;
           }
@@ -81,7 +82,7 @@
       }
       .Nav[direction="false"] {
         width: 21%;
-        border-radius: 0.25em;
+        border-radius: 0 0.25em 0.25em 0;
       }
     }
 
@@ -100,10 +101,11 @@
       width: 80%;
       height: 20em;
       margin-bottom: 2em;
-      box-shadow: inset 0 0 200px 0 white;
+      z-index: 1;
       color: black;
       overflow: hidden;
       background-size: cover;
+      background-attachment: fixed;
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr;
@@ -149,6 +151,19 @@
         grid-column: 2;
         grid-row: 3;
       }
+    }
+    .Project::before {
+      content: "";
+      position: absolute;
+      background: inherit;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      box-shadow: inset 0 0 2000px 0 rgba(255, 255, 255, 0.75);
+      filter: blur(10px);
+      margin: -20px;
     }
   }
   .Contact {
