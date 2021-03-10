@@ -177,26 +177,12 @@ function App() {
             </a>
           ))}
         </div>
-        <form className="contact-form">
-          <label for="subject">Subject</label>
-          <input
-            type="text"
-            id="subject"
-            name="subject"
-            placeholder="Subject..."
-          />
-          <label for="message">Message</label>
-          {/* <input type="text" id="email" name="email" placeholder="email..." /> */}
-          <textarea
-            id="message"
-            name="message"
-            rows="4"
-            cols="30"
-            placeholder="Like what you see? Let me know!"
-          ></textarea>
-          <input type="submit" value="Submit" />
-        </form>
-        <a href="tel:7024652519">(702) 465-2519</a>
+        <div className="contact-methods-wrapper">
+          <a href="mailto:aaronrine@gmail.com" target="_blank" rel="noreferrer">
+            aaronrine@gmail.com
+          </a>
+          <a href="tel:7024652519">(702) 465-2519</a>
+        </div>
       </section>
     </div>
   );
