@@ -153,7 +153,6 @@ function App() {
     <div className={classes.App}>
       <div className={classes.splashContainer}>
         <Header />
-        {/* <h1>Elegant solutions to practical problems.</h1> */}
         <Contact />
         <img
           className={classes.midPic}

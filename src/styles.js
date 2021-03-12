@@ -2,6 +2,10 @@ import { createUseStyles } from "react-jss";
 import header from "./assets/header.svg";
 
 const lightningBlue = "#02ccff";
+const smallDevice = 576;
+const mediumDevice = 768;
+const largeDevice = 992;
+const extraLargeDevice = 1200;
 
 export const useAppStyles = createUseStyles({
   App: {
@@ -13,15 +17,6 @@ export const useAppStyles = createUseStyles({
     alignItems: "center",
     "& > *": {
       textAlign: "center",
-    },
-  },
-  h1: {
-    fontSize: "2em",
-    margin: {
-      top: "1em",
-      bottom: "1em",
-      left: 0,
-      right: 0,
     },
   },
   splashContainer: {
