@@ -35,7 +35,9 @@ export const useHeaderStyles = createUseStyles({
     backgroundImage: `url(${header})`,
     backgroundSize: "cover",
     height: "calc(100vw / 2.37)",
-    "@media screen and (min-width: 700px)": {
+  },
+  [`@media screen and (min-width: ${smallDevice}px)`]: {
+    Header: {
       marginTop: "-15%",
     },
   },
@@ -44,7 +46,9 @@ export const useHeaderStyles = createUseStyles({
 export const useContactStyles = createUseStyles({
   Contact: {
     marginTop: "2em",
-
+    [`@media screen and (min-width: ${smallDevice}px)`]: {
+      fontSize: "1.5em",
+    },
     "&>h1": {
       marginBottom: "1em",
     },
@@ -63,7 +67,6 @@ export const useContactStyles = createUseStyles({
     },
   },
   contactMethodsWrapper: {
-    marginBottom: "2em",
     "&>a": {
       color: "inherit",
       textDecoration: "none",
@@ -230,6 +233,7 @@ export const useProjectsStyles = createUseStyles({
     alignItems: "center",
     marginBottom: "2em",
     "&>h1": {
+      fontSize: "2em",
       marginTop: "2em",
     },
   },
@@ -250,6 +254,7 @@ export const useProjectStyles = createUseStyles({
       gridTemplateRows: "1fr 1fr 1fr",
       placeItems: "center",
       "&>h2": {
+        fontSize: "1.75em",
         gridColumn: "1 / 3",
         gridRow: "1",
       },
@@ -298,6 +303,7 @@ export const useProjectStyles = createUseStyles({
   },
   btn: {
     width: "4.5em",
+    fontSize: "1.25em",
     padding: "0.25em 0",
     background: "black",
     color: lightningBlue,
@@ -307,6 +313,7 @@ export const useProjectStyles = createUseStyles({
       color: "inherit",
     },
   },
+  [`@media screen and (min-width: ${smallDevice}px)`]: {},
   btnDemo: {
     gridColumn: "1",
     gridRow: "3",
