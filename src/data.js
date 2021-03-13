@@ -16,29 +16,29 @@ export const icons = [
     icon: faGithub,
     uri: "https://github.com/aaronrine",
     key: 1111,
-    title: "github",
+    title: "Github",
   },
   {
     icon: faLinkedin,
     uri: "https://www.linkedin.com/in/aaron-rine-1903b511a/",
     key: 2222,
-    title: "linkedin",
+    title: "Linkedin",
   },
   {
     icon: faFileDownload,
     uri: "",
     key: 3333,
-    title: "resume",
+    title: "Resume",
   },
 ];
 
 export const badges = [
-  { source: html, alt: "html" },
-  { source: css, alt: "css" },
-  { source: js, alt: "js" },
-  { source: react, alt: "react" },
-  { source: sass, alt: "sass" },
-  { source: python, alt: "python" },
+  { source: html, alt: "html", title: "HTML" },
+  { source: css, alt: "css", title: "CSS" },
+  { source: js, alt: "js", title: "JavaScript" },
+  { source: react, alt: "react", title: "React.JS" },
+  { source: sass, alt: "sass", title: "Sass" },
+  { source: python, alt: "python", title: "Python" },
 ];
 
 function getBadges(keywords) {

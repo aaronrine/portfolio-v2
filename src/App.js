@@ -79,11 +79,12 @@ function Project({ project }) {
     <div className={classes.Project}>
       <h2>{project.name}</h2>
       <div className={classes.badgeContainer}>
-        {project.tech.map(({ source, alt }, index) => (
+        {project.tech.map(({ source, alt, title }, index) => (
           <img
             className={classes.badge}
             src={source}
             alt={alt}
+            title={title}
             key={index}
           ></img>
         ))}
@@ -134,10 +135,17 @@ function Contact() {
         ))}
       </div>
       <div className={classes.contactMethodsWrapper}>
-        <a href="mailto:aaronrine@gmail.com" target="_blank" rel="noreferrer">
+        <a
+          href="mailto:aaronrine@gmail.com"
+          target="_blank"
+          rel="noreferrer"
+          title="E-mail address"
+        >
           aaronrine@gmail.com
         </a>
-        <a href="tel:7024652519">(702) 465-2519</a>
+        <a href="tel:7024652519" title="Cellphone Number">
+          (702) 465-2519
+        </a>
       </div>
     </section>
   );
