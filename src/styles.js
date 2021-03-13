@@ -14,19 +14,30 @@ export const useAppStyles = createUseStyles({
     color: lightningBlue,
     display: "flex",
     flexDirection: "column",
-    alignItems: "center",
     "& > *": {
       textAlign: "center",
     },
   },
   splashContainer: {
+    position: "relative",
+    zIndex: "0",
     minHeight: "100vh",
+    width: "100%",
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
+    [`@media screen and (min-width: ${mediumDevice}px)`]: {
+      justifyContent: "flex-start",
+    },
   },
   midPic: {
     width: "100%",
+    [`@media screen and (min-width: ${mediumDevice}px)`]: {
+      position: "absolute",
+      zIndex: "-1",
+      left: "0",
+      bottom: "0",
+    },
   },
 });
 
@@ -49,6 +60,10 @@ export const useContactStyles = createUseStyles({
     [`@media screen and (min-width: ${smallDevice}px)`]: {
       fontSize: "1.5em",
     },
+    [`@media screen and (min-width: ${mediumDevice}px)`]: {
+      fontSize: "2em",
+    },
+
     "&>h1": {
       marginBottom: "1em",
     },
@@ -134,21 +149,27 @@ export const useNavStyles = createUseStyles({
   },
   NavForwards: {
     width: "100%",
-    height: 60,
     position: "fixed",
     top: 0,
+    left: 0,
     backgroundColor: "black",
     color: "inherit",
     zIndex: "1000",
     display: "flex",
     alignItems: "center",
+    padding: "0.75em ",
     paddingLeft: "1em",
     transition: "0.3s ease-out",
+    [`@media screen and (min-width: ${mediumDevice}px)`]: {
+      fontSize: "2em",
+    },
   },
   hamburger: {
     fill: lightningBlue,
-    marginRight: "1.2em",
     borderRadius: 7,
+    [`@media screen and (min-width: ${mediumDevice}px)`]: {
+      transform: "scale(1.25)",
+    },
   },
   lineOneForwards: {
     animation: "$rotateDown 0.3s ease-out forwards",
@@ -178,27 +199,31 @@ export const useNavStyles = createUseStyles({
     justifyContent: "center",
     alignItems: "center",
     overflow: "hidden",
-    transition: "width 0.5s ease-out",
+    transition: "width 0.3s ease-out",
     "&>a": {
       textDecoration: "none",
       color: lightningBlue,
       fontWeight: "bold",
-      fontSize: "1.2em",
     },
     "&>a + a": {
       marginLeft: "1.2em",
     },
+    [`@media screen and (min-width: ${mediumDevice}px)`]: {
+      "&>a:last-child": {
+        marginRight: 110,
+      },
+    },
   },
   linkWrapperBackwards: {
     width: 0,
-    height: 40,
     position: "absolute",
     left: "3.5em",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     overflow: "hidden",
-    transition: "width 0.5s ease-out",
+    transition: "width 0.3s ease-out",
+
     "&>a": {
       textDecoration: "none",
       color: lightningBlue,
@@ -211,8 +236,7 @@ export const useNavStyles = createUseStyles({
   },
   NavBackwards: {
     width: 70,
-    borderRadius: "0 .25em .25em 0",
-    height: 60,
+    borderRadius: "0 .0 .25em 0",
     position: "fixed",
     top: 0,
     backgroundColor: "black",
@@ -220,8 +244,13 @@ export const useNavStyles = createUseStyles({
     zIndex: "1000",
     display: "flex",
     alignItems: "center",
+    padding: "0.75em ",
     paddingLeft: "1em",
     transition: "0.3s ease-out",
+    [`@media screen and (min-width: ${mediumDevice}px)`]: {
+      fontSize: "2em",
+      width: 110,
+    },
   },
 });
 
@@ -234,7 +263,12 @@ export const useProjectsStyles = createUseStyles({
     marginBottom: "2em",
     "&>h1": {
       fontSize: "2em",
-      marginTop: "2em",
+      marginTop: "1em",
+    },
+    [`@media screen and (min-width: ${mediumDevice}px)`]: {
+      "&>h1": {
+        fontSize: "3em",
+      },
     },
   },
 });
@@ -245,8 +279,7 @@ export const useProjectStyles = createUseStyles({
       position: "relative",
       marginTop: "2em",
       width: "80%",
-      height: "20em",
-      zIndex: "1",
+      zIndex: "0",
       color: "black",
       overflow: "hidden",
       display: "grid",
@@ -254,7 +287,6 @@ export const useProjectStyles = createUseStyles({
       gridTemplateRows: "1fr 1fr 1fr",
       placeItems: "center",
       "&>h2": {
-        fontSize: "1.75em",
         gridColumn: "1 / 3",
         gridRow: "1",
       },
@@ -282,6 +314,22 @@ export const useProjectStyles = createUseStyles({
       },
     };
   },
+  ["@media screen and (min-width: 0px)"]: {
+    Project: {
+      height: "20em",
+      "&>h2": {
+        fontSize: "1.75em",
+      },
+    },
+  },
+  [`@media screen and (min-width: ${mediumDevice}px)`]: {
+    Project: {
+      height: "30em",
+      "&>h2": {
+        fontSize: "2.5em",
+      },
+    },
+  },
 
   badgeContainer: {
     gridColumn: "1",
@@ -294,7 +342,10 @@ export const useProjectStyles = createUseStyles({
     padding: "0.3em",
   },
   badge: {
-    width: 30,
+    width: "2rem",
+    [`@media screen and (min-width: ${mediumDevice}px)`]: {
+      width: "3rem",
+    },
   },
   p: {
     fontSize: "1.2em",
@@ -312,8 +363,10 @@ export const useProjectStyles = createUseStyles({
       textDecoration: "none",
       color: "inherit",
     },
+    [`@media screen and (min-width: ${mediumDevice}px)`]: {
+      fontSize: "1.75em",
+    },
   },
-  [`@media screen and (min-width: ${smallDevice}px)`]: {},
   btnDemo: {
     gridColumn: "1",
     gridRow: "3",

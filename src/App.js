@@ -69,11 +69,7 @@ function Nav() {
 
 function Header() {
   const classes = useHeaderStyles();
-  return (
-    <header className={classes.Header}>
-      <Nav />
-    </header>
-  );
+  return <header className={classes.Header}></header>;
 }
 
 function Project({ project }) {
@@ -151,6 +147,7 @@ function App() {
   const classes = useAppStyles();
   return (
     <div className={classes.App}>
+      <Nav />
       <div className={classes.splashContainer}>
         <Header />
         <Contact />
