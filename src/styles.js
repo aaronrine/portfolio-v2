@@ -4,7 +4,6 @@ import header from "./assets/header.svg";
 const lightningBlue = "#02ccff";
 const smallDevice = 576;
 const mediumDevice = 768;
-const largeDevice = 992;
 const extraLargeDevice = 1200;
 
 export const useAppStyles = createUseStyles({
@@ -29,6 +28,9 @@ export const useAppStyles = createUseStyles({
     [`@media screen and (min-width: ${mediumDevice}px)`]: {
       justifyContent: "flex-start",
     },
+    [`@media screen and (min-width: ${extraLargeDevice}px)`]: {
+      height: "125vh",
+    },
   },
   midPic: {
     width: "100%",
@@ -52,6 +54,12 @@ export const useHeaderStyles = createUseStyles({
       marginTop: "-15%",
     },
   },
+  [`@media screen and (min-width: ${extraLargeDevice}px)`]: {
+    Header: {
+      transform: "scaleY(0.6)",
+      marginTop: "-20%",
+    },
+  },
 });
 
 export const useContactStyles = createUseStyles({
@@ -63,7 +71,9 @@ export const useContactStyles = createUseStyles({
     [`@media screen and (min-width: ${mediumDevice}px)`]: {
       fontSize: "2em",
     },
-
+    [`@media screen and (min-width: ${extraLargeDevice}px)`]: {
+      marginTop: "-3em",
+    },
     "&>h1": {
       marginBottom: "1em",
     },
@@ -167,6 +177,9 @@ export const useNavStyles = createUseStyles({
   hamburger: {
     fill: lightningBlue,
     borderRadius: 7,
+    "&:hover": {
+      cursor: "pointer",
+    },
     [`@media screen and (min-width: ${mediumDevice}px)`]: {
       transform: "scale(1.25)",
     },
@@ -270,6 +283,14 @@ export const useProjectsStyles = createUseStyles({
         fontSize: "3em",
       },
     },
+    [`@media screen and (min-width: ${extraLargeDevice}px)`]: {
+      display: "grid",
+      gridTemplateColumns: "1fr 1fr",
+      placeItems: "center",
+      "&>h1": {
+        gridColumn: "1 / 3",
+      },
+    },
   },
 });
 
@@ -284,7 +305,6 @@ export const useProjectStyles = createUseStyles({
       overflow: "hidden",
       display: "grid",
       gridTemplateColumns: "1fr 1fr",
-      gridTemplateRows: "1fr 1fr 1fr",
       placeItems: "center",
       "&>h2": {
         gridColumn: "1 / 3",
