@@ -4,7 +4,8 @@ import header from "./assets/header.svg";
 const lightningBlue = "#02ccff";
 const smallDevice = 576;
 const mediumDevice = 768;
-const extraLargeDevice = 1200;
+const largeDevice = 996;
+const extraLargeDevice = 1100;
 
 export const useAppStyles = createUseStyles({
   App: {
@@ -39,6 +40,7 @@ export const useAppStyles = createUseStyles({
       zIndex: "-1",
       left: "0",
       bottom: "0",
+      opacity: "0.5",
     },
   },
 });
@@ -54,10 +56,14 @@ export const useHeaderStyles = createUseStyles({
       marginTop: "-15%",
     },
   },
+  [`@media screen and (min-width: ${largeDevice}px)`]: {
+    Header: {
+      marginTop: "-20%",
+    },
+  },
   [`@media screen and (min-width: ${extraLargeDevice}px)`]: {
     Header: {
       transform: "scaleY(0.6)",
-      marginTop: "-20%",
     },
   },
 });
