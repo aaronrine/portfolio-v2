@@ -340,6 +340,7 @@ export const useProjectStyles = createUseStyles({
       },
     };
   },
+  //eslint-disable-next-line
   ["@media screen and (min-width: 0px)"]: {
     Project: {
       height: "20em",
