@@ -1,5 +1,5 @@
 import { createUseStyles } from "react-jss";
-import header from "./assets/header.svg";
+import header from "./assets/site/header.svg";
 
 const lightningBlue = "#02ccff";
 const smallDevice = 576;

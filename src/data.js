@@ -1,14 +1,14 @@
-import html from "./assets/html.png";
-import css from "./assets/css.webp";
-import js from "./assets/JavaScript.png";
-import php from "./assets/php.png";
-import react from "./assets/react2.png";
-import sass from "./assets/sass.png";
-import wordpress from "./assets/wordpress2.png";
-import python from "./assets/python.webp";
-import glassHighlight from "./assets/blue-glass-highlight.jpg";
-import progressBar from "./assets/progressBars.png";
-import propocket from "./assets/propocket.png";
+import html from "./assets/badges/html.png";
+import css from "./assets/badges/css.webp";
+import js from "./assets/badges/JavaScript.png";
+import php from "./assets/badges/php.png";
+import react from "./assets/badges/react2.png";
+import sass from "./assets/badges/sass.png";
+import wordpress from "./assets/badges/wordpress2.png";
+import python from "./assets/badges/python.webp";
+import glassHighlight from "./assets/site/blue-glass-highlight.jpg";
+import progressBar from "./assets/projects/progressBars.png";
+import propocket from "./assets/projects/propocket.png";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faFileDownload } from "@fortawesome/free-solid-svg-icons";
 
