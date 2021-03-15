@@ -1,5 +1,5 @@
 import { createUseStyles } from "react-jss";
-import header from "./assets/header.svg";
+import header from "./assets/site/header.svg";
 
 const lightningBlue = "#02ccff";
 const smallDevice = 576;
@@ -213,10 +213,9 @@ export const useNavStyles = createUseStyles({
   },
 
   linkWrapperForwards: {
-    width: "80%",
+    width: "100%",
     height: 40,
     position: "absolute",
-    left: "3.5em",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -228,7 +227,7 @@ export const useNavStyles = createUseStyles({
       fontWeight: "bold",
     },
     "&>a + a": {
-      marginLeft: "1.2em",
+      marginLeft: "3em",
     },
     [`@media screen and (min-width: ${mediumDevice}px)`]: {
       "&>a:last-child": {
@@ -358,6 +357,9 @@ export const useProjectStyles = createUseStyles({
   ["@media screen and (min-width: 0px)"]: {
     Project: {
       height: "20em",
+      "&>p": {
+        fontSize: "1.2em",
+      },
       "&>h2": {
         fontSize: "1.75em",
       },
@@ -368,6 +370,9 @@ export const useProjectStyles = createUseStyles({
       height: "30em",
       "&>h2": {
         fontSize: "2.5em",
+      },
+      "&>p": {
+        fontSize: "2em",
       },
     },
   },
