@@ -40,7 +40,7 @@ export const useAppStyles = createUseStyles({
       zIndex: "-1",
       left: "0",
       bottom: "0",
-      opacity: "0.5",
+      opacity: "0.4",
     },
   },
 });
