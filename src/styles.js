@@ -189,6 +189,9 @@ export const useNavStyles = createUseStyles({
     [`@media screen and (min-width: ${mediumDevice}px)`]: {
       transform: "scale(1.25)",
     },
+    [`@media screen and (min-width: ${extraLargeDevice}px)`]: {
+      display: "none",
+    },
   },
   lineOneForwards: {
     animation: "$rotateDown 0.3s ease-out forwards",
@@ -242,6 +245,11 @@ export const useNavStyles = createUseStyles({
     alignItems: "center",
     overflow: "hidden",
     transition: "width 0.3s ease-out",
+    [`@media screen and (min-width: ${extraLargeDevice}px)`]: {
+      left: "0",
+      width: "100%",
+      justifyContent: "space-evenly",
+    },
 
     "&>a": {
       textDecoration: "none",
@@ -251,6 +259,9 @@ export const useNavStyles = createUseStyles({
     },
     "&>a + a": {
       marginLeft: "1.2em",
+      [`@media screen and (min-width: ${extraLargeDevice}px)`]: {
+        marginLeft: "0",
+      },
     },
   },
   NavBackwards: {
@@ -269,6 +280,9 @@ export const useNavStyles = createUseStyles({
     [`@media screen and (min-width: ${mediumDevice}px)`]: {
       fontSize: "2em",
       width: 110,
+    },
+    [`@media screen and (min-width: ${extraLargeDevice}px)`]: {
+      width: "100%",
     },
   },
 });
