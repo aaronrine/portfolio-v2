@@ -213,7 +213,8 @@ export const useNavStyles = createUseStyles({
   },
 
   linkWrapperForwards: {
-    width: "100%",
+    width: "80%",
+    marginLeft: "3em",
     height: 40,
     position: "absolute",
     display: "flex",
@@ -318,6 +319,7 @@ export const useProjectStyles = createUseStyles({
     return {
       position: "relative",
       marginTop: "2em",
+      padding: "2em 0",
       width: "80%",
       zIndex: "0",
       color: "black",
@@ -356,7 +358,7 @@ export const useProjectStyles = createUseStyles({
   //eslint-disable-next-line
   ["@media screen and (min-width: 0px)"]: {
     Project: {
-      height: "20em",
+      minHeight: "20em",
       "&>p": {
         fontSize: "1.2em",
       },

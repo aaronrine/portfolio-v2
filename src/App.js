@@ -12,11 +12,15 @@ import { useState } from "react";
 
 function Nav() {
   const [burgerState, setBurgerState] = useState(false);
+  
   const classes = useNavStyles();
   return (
     <nav className={burgerState ? classes.NavForwards : classes.NavBackwards}>
+      <div onClick={() => setBurgerState(prev => {
+        console.log(!prev)
+        return !prev
+        })}>
       <svg
-        onClick={() => setBurgerState((prev) => !prev)}
         className={classes.hamburger}
         viewBox="0 0 100 80"
         width="40"
@@ -49,6 +53,7 @@ function Nav() {
           rx="15"
         />
       </svg>
+      </div>
       <div
         className={
           burgerState
