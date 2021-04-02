@@ -8,6 +8,7 @@ import wordpress from "./assets/badges/wordpress2.png";
 import python from "./assets/badges/python.webp";
 import glassHighlight from "./assets/site/blue-glass-highlight.jpg";
 import progressBar from "./assets/projects/progressBars.png";
+import todoApp from "./assets/projects/todo-app-better-phone.png"
 import propocket from "./assets/projects/propocket.png";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faFileDownload } from "@fortawesome/free-solid-svg-icons";
@@ -70,10 +71,11 @@ export const projects = [
     code: "",
   },
   {
-    name: "Temp2",
-    tech: getBadges(["html", "css", "js"]),
-    image: progressBar,
-    demo: "http://www.google.com",
-    code: "#top",
+    name: "Todo App",
+    tech: getBadges(["html", "css", "js", 'react', 'sass']),
+    image: todoApp,
+    desc: 'The humble todo app. Mine features responsive drag and drop, localstorage saving and the normal CRUD you\'d expect from any similar app.',
+    demo: "https://aaron-demo-todo.rine.us/",
+    code: "https://github.com/aaronrine/todo-v2",
   },
 ];
