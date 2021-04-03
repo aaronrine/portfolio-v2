@@ -1,4 +1,6 @@
 import { createUseStyles } from "react-jss";
+
+import preset from 'jss-preset-default'
 import header from "./assets/site/header.svg";
 
 const lightningBlue = "#02ccff";
@@ -7,6 +9,8 @@ const mediumDevice = 768;
 const largeDevice = 996;
 const extraLargeDevice = 1100;
 
+
+preset();
 export const useAppStyles = createUseStyles({
   App: {
     minHeight: "100vh",
@@ -347,6 +351,7 @@ export const useProjectStyles = createUseStyles({
         position: "absolute",
         width: "100%",
         height: "100%",
+        top: '0',
         backgroundAttachment: "fixed",
         background: `url(${project.image}) no-repeat center center`,
         backgroundSize: "cover",
@@ -361,6 +366,8 @@ export const useProjectStyles = createUseStyles({
       minHeight: "20em",
       "&>p": {
         fontSize: "1.2em",
+        marginBottom: '1em',
+        textAlign: 'left'
       },
       "&>h2": {
         fontSize: "1.75em",

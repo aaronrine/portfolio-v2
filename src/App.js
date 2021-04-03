@@ -81,7 +81,7 @@ function Project({ project }) {
   const classes = useProjectStyles(project);
 
   return (
-    <div className={classes.Project}>
+    <div className={`${classes.Project} Project`}>
       <h2>{project.name}</h2>
       <div className={classes.badgeContainer}>
         {project.tech.map(({ source, alt, title }, index) => (
